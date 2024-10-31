@@ -1,0 +1,202 @@
+.whyChooseContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  position: relative;
+  margin-top: 80px;
+  flex-wrap: wrap; /* Ekran küçüldüğünde içeriğin taşmasını önler */
+}
+
+.leftColumn {
+  flex: 1;
+  text-align: left;
+}
+
+.leftColumn h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #035800;
+  text-shadow: 2px 2px 4px #035800;
+}
+
+.leftColumn h2 {
+  font-size: 2rem;
+  color: #035800;
+  margin-top: -20px;
+}
+
+.bagImage {
+  height: 600px;
+  margin-top: 230px;
+  position: absolute;
+  top: -300px;
+  right: 40%;
+  transform: translateY(6px);
+  opacity: 0;
+  transition: transform 3s ease-out, opacity 1s ease-out;
+}
+
+.bagImage.inView {
+  transform: translateY(300px);
+  opacity: 1;
+}
+
+.rightColumn {
+  height: 750px;
+  flex: 1.2;
+  background-color: #035800;
+  color: white;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.rightColumn p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  margin-left: 250px;
+  margin-right: 50px;
+  margin-top: 70px;
+  transform: translateX(100px);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.rightColumn p:first-child {
+  margin-top: 50px;
+  margin-left: 110px;
+}
+
+.rightColumn p.inView {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.rightColumn p:not(.inView) {
+  transform: translateX(100px);
+  opacity: 0;
+}
+
+@media (max-width: 1388px) {
+  .bagImage {
+    margin-top: 260px;
+  }
+
+  .rightColumn {
+    padding: 0.5rem;
+
+  }
+  
+  .rightColumn p {
+    margin-left: 140px;
+    margin-right: 30px;
+    margin-top: 60px;
+    transform: translateX(100px);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  .rightColumn p:first-child {
+    margin-top: 50px;
+    margin-left: 110px;
+  }
+}
+
+
+/* 1024px'den önce responsive düzenleme */
+@media (max-width: 1024px) {
+
+  .leftColumn h1 {
+    font-size: 3rem; /* Yazı boyutunu küçült */
+  }
+
+  .leftColumn h2 {
+    font-size: 1.8rem;
+  }
+
+  .bagImage {
+    max-width: 60%; /* Görselin genişliği küçülsün */
+    top: -400px; /* Görsel daha yukarı kaydırıldı */
+    right: auto; /* Sağdan kaydırma kaldırıldı */
+    transform: translateX(-50%) translateY(6px); /* Ortala */
+  }
+
+  .rightColumn {
+    width: 100%;
+    padding: 2rem;
+    height: auto; /* Yükseklik otomatik */
+  }
+
+  .rightColumn p {
+    margin-left: 58px; /* Yazıları sola yasla */
+    margin-right: 0px; /* Sağdan boşluk ver */
+    font-size: 1rem; /* Yazı boyutunu küçült */
+  }
+
+  .rightColumn p:first-child {
+    margin-top: 50px;
+    margin-left: 58px;
+  }
+}
+
+/* 768px'den önce daha fazla responsive düzenleme */
+@media (max-width: 768px) {
+
+
+  .bagImage {
+    max-width: 50%; /* Görselin genişliği küçülsün */
+    top: -500px; /* Görsel daha yukarı kaydırıldı */
+    right: 45%;
+    transform: translateX(-50%) translateY(6px); /* Ortala */
+  }
+
+  .rightColumn {
+    width: 100%;
+    height: auto; /* Yükseklik otomatik */
+  }
+
+  .rightColumn p {
+    margin-left: 60px; /* Yazıları sola yasla */
+    margin-right: 0px; /* Sağdan boşluk ver */
+    margin-bottom: 1rem;
+    font-size: 0.8rem; /* Yazı boyutunu küçült */
+  }
+
+  .rightColumn p:first-child {
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+/* 480px ve daha küçük ekranlar için */
+@media (max-width: 480px) {
+
+  .bagImage {
+    max-width: 60%; /* Görselin genişliği küçülsün */
+    top: -300px; /* Görsel daha yukarı kaydırıldı */
+    right: 45%;
+    transform: translateX(-50%) translateY(6px); /* Ortala */
+  }
+
+  .rightColumn {
+    width: 100%;
+    height: auto; /* Yükseklik otomatik */
+  }
+
+  .rightColumn p {
+    margin-left: 0px; /* Yazıları sola yasla */
+    margin-right: 0px; /* Sağdan boşluk ver */
+    margin-bottom: 1rem;
+    font-size: 0.8rem; /* Yazı boyutunu küçült */
+  }
+
+  .rightColumn p:first-child {
+    margin-top: 50px;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+}

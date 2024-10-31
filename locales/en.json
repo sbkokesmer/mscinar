@@ -1,0 +1,54 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "language": "English"
+  },
+  "headerTop": {
+    "freeShipping": "Free shipping on orders over $50!",
+    "callUs": "Call Us: +1 (234) 567-890",
+    "email": "Email: support@mybrand.com"
+  },
+  "footer": {
+    "pages": "Pages",
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "contactTitle": "Contact",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Atatürk Street, Seyhan Neighborhood, No:123, Seyhan, 01060, Adana, Turkey"
+  },
+  "homePage": {
+    "banner": {
+      "bannerTitle": "Çınar",
+      "bannerSubtitle": "Dunnage Bag",
+      "bannerDescription": "Lojistik sektöründe güvenilir ve dayanıklı çözümler sunar.",
+      "bannerSlogan": "Yükleriniz her zaman güvende!",
+      "exploreButton": "Keşfet"
+    },
+    "bannerDescription": {
+      "bannerDescriptionTitle": "Meet Çınar Dunnage Bag",
+      "bannerDescriptionP":  "As an innovative and dynamic company, we offer reliable solutions by focusing on load security. We provide customer satisfaction with our innovative products."
+    }
+  },
+  "aboutPage": {
+    "missionTitle": "Our Mission",
+    "missionDescription": "We aim to become a global leader by providing innovative, reliable, and customer-focused solutions in our industry.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "We produce eco-friendly products that facilitate our clients' business processes.",
+    "environmentTitle": "Environmental Awareness",
+    "environmentDescription": "At Çınar Dunnage Bag, we prioritize environmental awareness."
+  },
+  "contactPage": {
+    "contactUsTitle": "Contact Us!",
+    "contactFormTitle": "Contact Form",
+    "nameLabel": "Name Surname:",
+    "phoneLabel": "Phone Number:",
+    "subjectLabel": "Subject:",
+    "messageLabel": "Your Message:",
+    "submitButton": "Send",
+    "mapTitle": "Explore on the Map!"
+  }
+}

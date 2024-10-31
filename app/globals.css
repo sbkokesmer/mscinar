@@ -20,8 +20,95 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+.container {
+  width: 80%; /* Ekranın ortasında olacak şekilde genişliği ayarlıyoruz */
+  margin: 0 auto; /* Otomatik olarak yatayda ortalanmasını sağlar */
+  padding: 0; /* Üst ve alt kenarlardan boşluk gerekmiyorsa sıfırlayın */
+}
+
+.container-2 {
+  width: 80%; /* Ekranın ortasında olacak şekilde genişliği ayarlıyoruz */
+  margin: 0 auto; /* Otomatik olarak yatayda ortalanmasını sağlar */
+  padding: 0; /* Üst ve alt kenarlardan boşluk gerekmiyorsa sıfırlayın */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.banner-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.banner-description {
+  font-size: 1rem;
+  color: #34495e;
+}
+
+.ctaButton {
+  background-color: #035800; /* Butonun yeşil rengi */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+  background-color: #096809; /* Hover sırasında butonun rengi */
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%; /* Mobilde kenarlardan daha az boşluk bırakıyoruz */
+  }
+
+  .banner-title {
+    font-size: 1.5rem;
+  }
+
+  .banner-description {
+    font-size: 0.9rem;
+  }
+
+  .ctaButton {
+    font-size: 1rem;
+    padding: 0.4rem 1rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto; /* Butonu yatayda ortalamak için */
+  }
+  
+}
+

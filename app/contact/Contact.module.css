@@ -1,0 +1,153 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+  }
+  
+  .contactContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  
+  .leftColumn {
+    flex: 1;
+    padding-left: 1rem;
+  }
+  
+  .leftColumn h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .leftColumn p {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    width: auto;
+    height: auto;
+    background-color: f2f2f2;
+  }
+
+  .whiteBox{
+    width: 75%;
+    height: auto;
+    background-color: #f2f2f2;
+  }
+  
+  .info, .address {
+    margin-top: 2rem;
+  }
+  
+  .info h2, .address h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .rightColumn {
+    flex: 1;
+    border: 2px solid #035800;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .rightColumn h2 {
+    background-color: #035800;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form input, .form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .mapSection {
+    width: 80%;
+    text-align:start;
+    margin-bottom: 2rem;
+  }
+  
+  .mapSection h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .contactContainer {
+      flex-direction: column; /* Ekran daraldığında alt alta geçsin */
+    }
+  
+    .leftColumn, .rightColumn {
+      width: 100%; /* Tam genişlik */
+      padding: 0 1rem; /* Kenarlara boşluk ekle */
+    }
+  
+    .rightColumn {
+      margin-top: 2rem; /* Sağ kolon aşağı kayacak */
+    }
+  
+    .mapSection {
+      width: 100%; /* Harita da tam genişlik olacak */
+    }
+
+    .h2 {
+      margin-top: 20px;
+    }
+
+    
+  }
+  
+  @media (max-width: 768px) {
+    .leftColumn h1 {
+      font-size: 2rem; /* Başlık boyutu küçültüldü */
+    }
+  
+    .whiteBox, .rightColumn, .mapSection {
+      padding: 1rem; /* Küçük ekranlarda daha küçük padding */
+    }
+  
+    .mapSection h2 {
+      font-size: 1.3rem; /* Başlık boyutu küçüldü */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .leftColumn h1 {
+      font-size: 1.8rem; /* Daha küçük başlık */
+    }
+  
+    .whiteBox {
+      padding: 0.8rem; /* Daha küçük padding */
+    }
+  
+    .rightColumn h2 {
+      font-size: 1.2rem; /* Form başlığı küçültüldü */
+    }
+  
+    .form input, .form textarea {
+      font-size: 0.9rem; /* Form elemanları daha küçük */
+    }
+  
+    .mapSection {
+      padding: 0.5rem; /* Harita için padding küçüldü */
+    }
+  }

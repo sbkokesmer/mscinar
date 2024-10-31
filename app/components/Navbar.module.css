@@ -1,0 +1,204 @@
+.navbar {
+  background-color: #ffffff;
+  color: #035800;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Navbarın küçük ekranlarda içeriği kaydırmasına izin verir */
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  padding: 0;
+}
+
+.links {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap; /* Küçük ekranlarda içeriğin alt alta geçmesini sağlar */
+}
+
+.link {
+  color: black;
+  font-weight: normal; /* Varsayılan olarak normal */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #035800;
+}
+
+.languageSelectFlag {
+  font-size: 14px;
+  padding: 5px;
+  border: 2px solid #035800;
+  border-radius: 4px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.language {
+  color: #000 !important;
+}
+
+.language:hover {
+  color: #fff !important;
+}
+
+.languageSelectFlag:hover {
+  background-color: #035800;
+  color: white;
+}
+
+/* Gizli dil seçenekleri */
+.languageDropdown {
+  display: none; /* Başlangıçta gizli */
+  position: absolute;
+  top: 100%; /* Kutucuğun hemen altında yer alır */
+  left: 0;
+  width: 150px; /* Genişlik */
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown menü aktif olduğunda görünür */
+.languageDropdown.active {
+  display: block;
+}
+
+.languageDropdownItem {
+  padding: 8px;
+  color: #000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.languageDropdownItem:hover {
+  background-color: #f1f1f1;
+}
+
+.flagIcon {
+  width: auto;
+  height: 20px;
+  margin-right: 8px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet ve daha küçük cihazlar için */
+@media (max-width: 1024px) {
+  .links {
+    gap: 1.5rem; /* Linkler arasındaki boşluklar küçültülüyor */
+  }
+
+  .logo {
+    width: 150px; /* Logonun genişliği küçültülüyor */
+  }
+}
+
+/* Mobil cihazlar için */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row; /* Navbarı yatay olarak tutalım */
+    justify-content: space-between; /* Elemanlar arasında boşluk */
+    padding: 1rem; /* Küçük ekranlarda padding ayarı */
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5rem; /* Linkler arasındaki boşlukları küçültüyoruz */
+  }
+
+  .logo {
+    width: 100px; /* Logonun genişliği küçültülüyor */
+    height: auto;
+  }
+
+  .languageSelectFlag {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .languageDropdownItem {
+    padding: 6px; /* Mobilde dropdown padding'i küçültülüyor */
+  }
+
+  @media (max-width: 600px) {
+    .navbar {
+      flex-direction: row; /* Navbarı yatay tutalım */
+      padding: 0.5rem; /* Küçük ekranlarda padding ayarı */
+    }
+  
+    .links {
+      display: flex;
+      justify-content: center; /* Linklerin ortalanması */
+      gap: 0.5rem; /* Linkler arasındaki boşluğu küçültüyoruz */
+    }
+  
+    .logo {
+      display: none; /* 600px'den sonra logo kayboluyor */
+    }
+  
+    .link {
+      font-size: 0.85rem; /* Linklerin yazı boyutu küçültülüyor */
+    }
+  
+    .languageSelectFlag {
+      padding: 4px;
+      font-size: 0; /* Yazıyı gizlemek için font-size 0 */
+      display: flex;
+      align-items: center;
+      justify-content: center; /* Butonun tam ortalanması */
+    }
+  
+    .languageSelectFlag img {
+      width: 20px; /* Sadece bayrak ikonları görünecek */
+      height: auto;
+    }
+  
+    .languageDropdown {
+      display: block;
+      position: absolute;
+      font-size: 10px;
+      color: #000;
+      top: 100%; /* Kutucuğun hemen altında yer alır */
+      width: 80px;
+      background-color: white;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .languageDropdownItem {
+      padding: 6px; /* Mobilde dropdown padding'i küçültülüyor */
+      display: flex;
+    }
+  
+    .languageDropdownItem img {
+      width: 16px; /* Dropdown menüdeki bayrak ikonları küçültülüyor */
+      height: auto;
+      margin-right: 8px;
+    }
+  
+    .languageDropdownItem span {
+      font-size: 14px; /* Yazılar açılır menüde kalıyor ve görünür */
+      color: #000;
+    }
+  }  
+}

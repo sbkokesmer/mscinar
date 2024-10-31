@@ -1,0 +1,77 @@
+/* Genel header-top stili */
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem;
+    background-color: #035800;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .left {
+    font-size: 14px;
+  }
+  
+  .right {
+    display: flex; /* Yan yana yerleştirme için flex kullanıyoruz */
+    gap: 2rem; /* Elemanlar arasındaki boşluk */
+    font-size: 14px;
+  }
+  
+  
+  /* Tablet ve daha küçük cihazlar için */
+  @media (max-width: 1024px) {
+    .headerTop {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem;
+    }
+  
+    .headerTop .left,
+    .headerTop .right {
+      width: 100%;
+    }
+  
+    .headerTop .left {
+      margin-bottom: 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .headerTop {
+      flex-direction: column; /* Elemanları alt alta getirmek için */
+      padding: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .left,
+    .right {
+      text-align: center;
+      font-size: 0.8rem;
+    }
+  
+    .right {
+      flex-direction: column; /* Mobilde elemanları üst üste getirmek için */
+      gap: 0.5rem; /* Elemanlar arasındaki boşluk */
+    }
+
+    @media (max-width: 600px) {
+      .headerTop {
+        flex-direction: column; /* Elemanları dikey olarak yerleştirelim */
+        align-items: center; /* Ortalanmış hale getirelim */
+        text-align: center; /* İçerikleri ortalıyoruz */
+      }
+    
+      .left, .right {
+        font-size: 0.6rem; /* Yazı boyutları küçültülüyor */
+      }
+    
+      .left p, .right p {
+        font-size: 0.6rem; /* Daha küçük yazı boyutları */
+      }
+    
+      .right {
+        display: flex;
+        flex-direction: column; /* Her iki satır alt alta gelsin */
+      }
+    }    
+  }

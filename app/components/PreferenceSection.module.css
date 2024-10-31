@@ -1,0 +1,46 @@
+ .simpleSection {
+    margin-top: 80px;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    margin-top: 140px;
+  }
+  
+  .title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #2f5d3d;
+    margin-bottom: 20px;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 90%;
+    margin: 0 auto 40px;
+  }
+  
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image {
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 480px) {
+    .simpleSection {
+      margin-top: 30px;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+    
+    .description {
+      font-size: 1rem;
+    }
+  }
