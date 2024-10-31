@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './PreferenceSection.module.css';
 
 const PreferenceSection: React.FC = () => {
@@ -12,10 +13,13 @@ const PreferenceSection: React.FC = () => {
       </p>
 
       <div className={styles.imageWrapper}>
-        <img
-            src='/icons/preference.svg'
-            className={styles.svgIcon}
-            />
+        <Image
+          src='/icons/preference.svg'
+          alt='Preference Icon'
+          className={styles.svgIcon}
+          width={1000} // Görselin genişliği
+          height={100} // Görselin yüksekliği
+        />
       </div>
     </section>
   );

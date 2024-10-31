@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-
+import Image from 'next/image';
 import styles from './Banner.module.css';
 
 
@@ -29,10 +29,12 @@ export default function Banner() {
         </button>
       </div>
       <div className={styles.bannerImageContainer}>
-        <img
+      <Image
           src="/icons/banner1.svg"
-          className={styles.bannerImage}
           alt="Banner"
+          width={500}  // Genişliği buraya uygun bir değer olarak ayarlayın
+          height={300} // Yüksekliği buraya uygun bir değer olarak ayarlayın
+          className={styles.bannerImage}
         />
       </div>
     </div>

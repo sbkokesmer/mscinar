@@ -1,7 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 import { FaFacebook, FaXTwitter, FaLinkedin } from "react-icons/fa6";
-
 
 const Footer = () => {
   return (
@@ -10,10 +10,12 @@ const Footer = () => {
         {/* Sol Kısım: Logo ve Adres Bilgileri */}
         <div className={styles.footerColumn}>
           <div className={styles.logoWrapper}>
-            <img
+            <Image
               src="/icons/logo.svg"
               className={styles.logo}
               alt="MSCINAR Logo"
+              width={100} // Görselin genişliğini belirtin
+              height={50} // Görselin yüksekliğini belirtin
             />
           </div>
           <p className={styles.address}>Atatürk Caddesi, Seyhan Mahallesi, No:123, Seyhan, 01060, Adana, Türkiye</p>

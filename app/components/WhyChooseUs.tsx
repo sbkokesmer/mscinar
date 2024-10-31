@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import styles from './WhyChooseUs.module.css';
+import Image from 'next/image';
 
 export default function WhyChooseUs() {
   // Scroll animasyonu için IntersectionObserver kullanımı
@@ -50,7 +51,13 @@ export default function WhyChooseUs() {
         <p>Kolay kullanımı, tekrar kullanılabilir yapısı ve ekonomik çözümler sunmasıyla, sektörde fark yaratıyoruz.</p>
         <p>Müşteri odaklı yaklaşımımızla, lojistik çözümlerinizde sürdürülebilir ve güvenilir bir partneriz.</p>
       </div>
-      <img src="/icons/dunnage-bag.svg" alt="Dunnage Bag" className={styles.bagImage} />
+      <Image 
+        src="/icons/dunnage-bag.svg" 
+        alt="Dunnage Bag" 
+        className={styles.bagImage} 
+        width={600} // Görselin genişliği
+        height={300} // Görselin yüksekliği
+      />
     </div>
   );
 }

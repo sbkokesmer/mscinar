@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from './ProductsCarousel.module.css';
 
 const products = [
@@ -58,7 +59,13 @@ export default function ProductsCarousel() {
         >
           {products.map((product, index) => (
             <div key={index} className={styles.carouselItem}>
-              <img src={product.image} alt="Product" className={styles.carouselImage} />
+              <Image 
+                src={product.image} 
+                alt="Product" 
+                className={styles.carouselImage} 
+                width={200} 
+                height={200} 
+              />
               <div className={styles.description}></div>
               <div className={styles.textOverlay}>{product.description}</div>
             </div>

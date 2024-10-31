@@ -1,16 +1,5 @@
-import { useState } from 'react';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
-
-type NavbarProps = {
-  onChangeLanguage: (lang: 'en' | 'tr') => void;
-  currentLanguage: 'en' | 'tr';
-  translations: {
-    home: string;
-    about: string;
-    contact: string;
-    language: string;
-  };
-};
 
 export default function Navbar() {
 
@@ -18,7 +7,12 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className='container-2'>
         <div className={styles.logo}>
-          <img src='/icons/logo.svg' alt="Logo" />
+          <Image 
+            src='/icons/logo.svg' 
+            alt="Logo" 
+            width={150} // Genişliği belirtin
+            height={50}  // Yüksekliği belirtin
+          />
         </div>
         <div className={styles.links}>
           <a href="/" className={styles.link}>Anasayfa</a>
